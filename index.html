@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El año que conocí a Dafne</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, serif; background: #0f0f0f; color: #f5f5f5; line-height: 1.8; }
+  .hero {
+    height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center; padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200');
+    background-size: cover; background-position: center;
+  }
+  .hero small { letter-spacing: 4px; text-transform: uppercase; color: #ffcc70; font-size: 12px; }
+  .hero h1 { font-size: 48px; margin: 15px 0; line-height: 1.1; }
+  .hero p { max-width: 500px; opacity: 0.8; font-style: italic; }
+  .btn { margin-top: 20px; padding: 12px 28px; border: 1px solid #fff; color: #fff; text-decoration: none; border-radius: 30px; font-size: 14px; background: transparent; cursor: pointer; }
+  .btn-music { background: #ffcc70; color: #000; border: none; font-weight: bold; }
+  .container { max-width: 700px; margin: auto; padding: 60px 20px; }
+  .container h2 { font-size: 28px; margin: 50px 0 15px; color: #ffcc70; }
+  .container p { font-size: 18px; margin-bottom: 20px; color: #e8e8e8; }
+  .frase { border-left: 3px solid #ffcc70; padding-left: 20px; font-size: 22px; font-style: italic; margin: 40px 0; color: #fff; }
+  .card { background: #1c1c1c; border-radius: 15px; padding: 25px; margin: 30px 0; }
+  .card b { color: #ffcc70; }
+  footer { text-align: center; padding: 40px 20px; opacity: 0.6; font-size: 14px; }
+  .music-bar {
+    position: fixed; bottom: 15px; right: 15px; z-index: 100;
+    background: #1c1c1c; border: 1px solid #ffcc70;
+    padding: 10px 15px; border-radius: 30px;
+    font-size: 13px; display: flex; gap: 8px; align-items: center;
+  }
+  .music-bar button { background: #ffcc70; border: none; padding: 5px 12px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+  @media (max-width: 600px) { .hero h1 { font-size: 34px; } .container p { font-size: 17px; } }
+</style>
+</head>
+<body>
+
+<!-- MUSICA: IN THE POOL -->
+<audio id="musica" loop preload="auto">
+  <source src="in-the-pool.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hero">
+  <small>Una historia real • 1ro de secundaria</small>
+  <h1>El año que<br>conocí a Dafne</h1>
+  <p>"Las notas se arreglan, los profes se olvidan. Pero ella no."</p>
+  <button class="btn btn-music" onclick="toggleMusica()">▶ Poner In The Pool 🎵</button>
+  <a class="btn" href="#historia">Leer historia ↓</a>
+</div>
+
+<div class="container" id="historia">
+  <h2>1. Todo empezó normal</h2>
+  <p>Este año empezó normal, como todos los años. Mismo uniforme, mismo salón, mismos profes jodiendo desde el primer día.</p>
+  <p>Yo andaba tranquilo, sacando A y AD en casi todo, hasta en Matemática que es la más pesada. Mi único hueco era DPCC. Y no porque no entienda, los temas los entiende hasta un niño de primaria. Yo jalé porque soy bien huevón, no exponía, no presentaba el cuaderno, me hacía el loco.</p>
+  <div class="frase">"Fue como si el ruido del salón se apagara un segundo."</div>
+  <h2>2. Cuando la conocí</h2>
+  <p>Fue en el cole, un día cualquiera, de esos que ni te acuerdas qué día era. Yo estaba en mi mundo, jodiendo con mis compañeros, y de la nada la vi.</p>
+  <p>No fue amor de película, fue algo más tranqui, como paz. Como cuando estás cagado por todo y de la nada respiras.</p>
+  <p>Desde ahí, mi año se partió en dos. Antes de Dafne y después de Dafne.</p>
+  <h2>3. El año que me pegó fuerte</h2>
+  <p>Porque este año también me pasó de todo. Problemas en mi casa, problemas en el cole, problemas con mis notas, problemas con mi cabeza.</p>
+  <p>Había días que llegaba al cole sin ganas de hablar con nadie, bien apagado. Y sin querer, a veces la cagaba con ella. Y eso me dolía más que cualquier nota.</p>
+  <div class="card"><p><b>Lo que hice por ella:</b><br><br>
+        - Me quedé hasta tarde haciendo tareas<br>
+        - Me aguanté mis broncas para sonreírle<br>
+        - Aprendí a exponer en DPCC aunque me moría de vergüenza<br>
+        - Todo, con tal de que ella no se sienta sola</p></div>
+  <h2>4. Nostalgia</h2>
+  <p>Y ahora que el año ya se está acabando, me da una nostalgia que no sé explicar.</p>
+  <p>Me acuerdo de todo. De las risas en el recreo hasta que nos dolía la panza, de copiarnos la tarea a última hora, de los chismes, de las bromas en plena clase.</p>
+  <p>Voy a extrañar a cada compañero y compañera. Hasta a los que me caían mal. Porque ese salón era mi gente, era mi sitio.</p>
+  <div class="frase">"Yo algún día quiero vivir una vida feliz con Dafne. Algo real, algo tranqui."</div>
+  <h2>5. El otro año</h2>
+  <p>Y el año que viene quiero seguir siendo feliz a su lado. Que sea un año mejor, sin tanto drama, sin tanto problema. Solo nosotros, tranquilos.</p>
+  <p>Por eso hasta me postulé al municipio escolar. La gente piensa que fue por las notas, pero la verdad es que lo hice para tener una excusa para seguir con ella el otro año.</p>
+  <p>Pero al final ya no importa, porque si o si voy a estar ahí. Porque eso no fue lo único que hice para quedarme. Aguanté todo lo que tuve que aguantar, solo para quedarme a su lado.</p>
+  <h2>Final</h2>
+  <p>Al final, este año me dejó un montón de cicatrices, pero también me dejó lo mejor: haber conocido a Dafne.</p>
+  <p>Las notas se arreglan, la recuperación se pasa, los profes se olvidan. Pero ella no. Ella es lo que de verdad quiero cuidar.</p>
+</div>
+
+<div class="music-bar">
+  <span>🎵 In The Pool</span>
+  <button id="btnMusica2" onclick="toggleMusica()">Play</button>
+</div>
+
+<footer>Escrita con el corazón • 1ro de secundaria • 2026</footer>
+
+<script>
+  let sonando = false;
+  let audio = document.getElementById('musica');
+  audio.volume = 0.5;
+  function toggleMusica() {
+    if (!sonando) {
+      audio.play();
+      sonando = true;
+      document.getElementById('btnMusica2').innerText = 'Pausa';
+    } else {
+      audio.pause();
+      sonando = false;
+      document.getElementById('btnMusica2').innerText = 'Play';
+    }
+  }
+</script>
+
+</body>
+</html>
